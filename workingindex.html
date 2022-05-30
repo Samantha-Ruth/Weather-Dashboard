@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <title>Weather-Dashboard</title>
+</head>
+
+<body>
+    <!--Start of Header-->
+    <header>
+        <h2 class="p-3 border border-dark bg-primary text-light .d-flex justify-content-center">Weather Dashboard</h2>
+    </header>
+    <!-- End of header, start of sidebar -->
+    <main>
+        <div class="row">
+            <div class="sidebar col-3">
+                <form id="city-search" class="search border border-dark">
+                    <h3>Search for a City</h3>
+                    <input id="input-city" type="text" placeholder="San Diego"></input>
+                    <button>Search</button>
+                </form>
+                <div class="previous-searches border border-dark">
+                    <h4 class="past-city bg-secondary p-1 text-dark bg-opacity-10">Past City 1</h4>
+                    <h4 class="past-city mb-2 bg-secondary p-1">Past City 2</h4>
+                </div>
+            </div>
+            <div class="border col-9 border-secondary">
+                <div class="border border-dark container current-city">
+                    <h3 class="mb-0">City and Date and Icon</h3>
+                    <div class="row p-3">
+                       <ol id="current-city" class="col-10">
+                            <!-- <li class="city">City</li>
+                            <li class="date">Date</li>
+                            <li class="temp">Temp</li>
+                            <li class="wind">Wind</li>
+                            <li class="humidity">Humidity</li> -->
+                            <li class="uv">
+                                <a class="indicator">UV</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row" id="cards">
+                        <div class="card col-2">
+                            <div id="card-body" card="card-body">
+                                <p class="date">date</p>
+                                <p class="icon">icon</p>
+                                <p class="temp">temp</p>
+                                <p class="wind">wind</p>
+                                <p class="humidity">humidity</p>
+                            </div>
+                        </div>
+                        <div class="card col-2">
+                            <div card="card-body">
+                                <p class="date">date</p>
+                                <p class="icon">icon</p>
+                                <p class="temp">temp</p>
+                                <p class="wind">wind</p>
+                                <p class="humidity">humidity</p>
+                            </div>
+                        </div>
+                        <div class="card col-2">
+                            <div card="card-body">
+                                <p class="date">date</p>
+                                <p class="icon">icon</p>
+                                <p class="temp">temp</p>
+                                <p class="wind">wind</p>
+                                <p class="humidity">humidity</p>
+                            </div>
+                        </div>
+                        <div class="card col-2">
+                            <div card="card-body">
+                                <p class="date">date</p>
+                                <p class="icon">icon</p>
+                                <p class="temp">temp</p>
+                                <p class="wind">wind</p>
+                                <p class="humidity">humidity</p>
+                            </div>
+                        </div>
+                        <div class="card col-2">
+                            <div card="card-body">
+                                <p class="date">date</p>
+                                <p class="icon">icon</p>
+                                <p class="temp">temp</p>
+                                <p class="wind">wind</p>
+                                <p class="humidity">humidity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- modals -->
+        <div id="form-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content has-text-centered has-text-white">
+                <div class="box">
+                    <p>Please provide country name.</p>
+                </div>
+            </div>
+        </div>
+        <div id="form-error-fetch" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content has-text-centered has-text-white">
+                <div class="box">
+                    <p>Invalid country name.</p>
+                </div>
+            </div>
+        </div>
+        <div id="form-error-server" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content has-text-centered has-text-white">
+                <div class="box">
+                    <p>Server Error. Please try again later.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

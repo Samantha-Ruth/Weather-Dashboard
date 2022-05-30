@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather-Dashboard</title>
+</head>
+
+<body>
+    <!-- Bootstrap modals -->
+    <div id="form-error-fetch" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Invalid country name.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="form-error-server" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Server Error. Please try again later.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Start of Header-->
+    <header>
+        <h2 class="p-3 bg-primary text-light .d-flex text-center">Weather Dashboard</h2>
+    </header>
+    <!-- End of header, start of sidebar -->
+    <main>
+        <div class="row">
+            <div class="sidebar lg-col-3 md-col-4 sm-col-1 text-center">
+                <form id="city-search" class="search .d-flex text-center">
+                    <h3 >Search for a City</h3>
+                    <input class = ".d-flex text-center" id="input-city" type="text" placeholder="Enter City Here"></input>
+                    <button>Search</button>
+                </form>
+                <div id="previous-searches">
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="border border-secondary container current-city">
+                    <h3 id="current-city" class="mb-0"></h3>
+                    <div class="row p-3">
+                        <ol id="current-city-list" class="col-10">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div>
+                    <div id="weather-card-container" class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
