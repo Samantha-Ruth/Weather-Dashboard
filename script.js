@@ -39,7 +39,7 @@ var formSubmitHandler = function (event) {
 // Confirm Cituy and Fetch Current Weather
 var confirmCityName = function (cityName) {
     var APIKey = "94d7d6bc2bb36707aa5c0b648193b2ce";
-    var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
     // Get Current Weather from City
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
@@ -116,7 +116,7 @@ var eventHandler = function (event) {
 var getCityWeather = function (cityName) {
     // run api again (do we need to confirm city?)
     var APIKey = "94d7d6bc2bb36707aa5c0b648193b2ce";
-    var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey + "&units=imperial";
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey + "&units=imperial";
     fetch(apiUrl)
         .then(function (response) {
             // Convert to JSON
