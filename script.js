@@ -178,7 +178,7 @@ forecastData = [];
 var getForecastedWeather = function (cityName) {
     var forecastAPIKey = "b52c5269f80204bc6e363506e9eb053e";
     // 5 day forecast with data every 3 hours by city name. 
-    var forecastApiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + forecastAPIKey +"&units=imperial";
+    var forecastApiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + forecastAPIKey +"&units=imperial";
     fetch(forecastApiUrl)
         .then(function (response) {
             if (response.ok) {
