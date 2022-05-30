@@ -202,7 +202,7 @@ var getForecastedWeather = function (cityName) {
 
         var cardDiv = document.createElement("div");
         cardDiv.textContent = "5 Day Forecast:";
-        cardDiv.setAttribute("class", "card col-4 text center");
+        cardDiv.setAttribute("class", "bg-dark text-light card col-4 text center");
         var cardBody = document.createElement("div");
         cardBody.setAttribute("class", "card-body");
         var paragraph = document.createElement("p");
