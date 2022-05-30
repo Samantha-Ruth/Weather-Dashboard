@@ -6,6 +6,7 @@ Current and Forecasted Weather
 This project's goal was to create a site where one could find the current and forecasted weather conditions for any city.  When the user enters a city, the application should show the current temperature, wind, humidity, and UV as well as the future temperature, wind, humidity, and UV for the next five days. The application was built using API fetches while integrating javaScript and HTML styling with Bootstrap. Previously searched cities should show up on a sidebar and stay there when the screen is refreshed,, incorporating local storage.  
 
 
+![Weather Dashboard Screen Shot](https://user-images.githubusercontent.com/64170123/170913520-5d593f23-bf05-4e8b-b427-a248cea9630c.jpg)
 
 
 
